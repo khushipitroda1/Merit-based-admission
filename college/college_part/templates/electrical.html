@@ -1,0 +1,72 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block body %}
+{% block content %}
+    {% if score == "None" %}
+      <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+    {% else %}
+      <p class="btn btn-style btn-info">Merit score : {{score}}</p>
+    {% endif %}
+  {% endblock %}
+
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container py-2">
+        <h2 class="title">Electrical Engineering</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Merit </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+  <!-- /about-6-->
+  <section class="w3l-cta4 py-5">
+      <div class="container py-lg-5">
+	  
+        <table class="table table-hover ">
+  <thead>
+    <tr class="bg-warning">
+      
+      <th>College Name</th>
+      <th>Intake</th>
+      <th>Last Cutoff</th>
+	  <th>Admission Probability </th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for i in col %}
+      <tr class="">
+        <td>{{i.name}}</td>
+        <td>{{i.electrical_seats}}</td>
+        <td>{{i.electrical_cutoff}}</td>
+        <td>
+          {% if i.electrical_cutoff < score %}
+            Yes
+          {% elif score == "None" %}
+            Generate your merit score first
+          {% else %}
+            No
+          {% endif %} 
+        </td>
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+           
+        </div>
+			
+      </div>
+  </section>
+  <!-- //about-6-->
+   <!-- /content-6-->
+  
+  <!--/w3l-footer-29-main-->
+  
+{% endblock %}

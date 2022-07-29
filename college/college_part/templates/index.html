@@ -1,0 +1,199 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block body %}
+
+  {% block content %}
+    {% if score == "None" %}
+      <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+    {% else %}
+      <p class="btn btn-style btn-info">Merit score : {{score}}</p>
+    {% endif %}
+  {% endblock %}
+  <!-- main-slider -->
+  <section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+      <div class="owl-one owl-carousel owl-theme">
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg text-left">
+                    <p>ONLINE</p>
+                    <h5>Merit based college finder</h5>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info  banner-view banner-top1 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg text-left">
+                    <p>Check available</p>
+                    <h5>Engineering colleges</h5>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view banner-top2 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg text-left">
+                    <p>Check Recent</p>
+                    <h5>Merit of all branches </h5>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- /main-slider -->
+  <!-- stats -->
+ 
+  <!-- //stats -->
+  <!--/grids-->
+  <section class="w3l-grids-3 py-5" id="about">
+    <div class="container py-md-5">
+      <div class="row bottom-ab-grids align-items-center">
+        <div class="col-lg-6 bottom-ab-left pr-lg-5">
+          <h6 class="sub-title">Online merit based </h6>
+          <h3 class="hny-title">One-stop portal for college admission and cutoffs</h3>
+          <p class="my-3 pr-lg-4">small description goes here. 30 words. small description goes here. 30 words. small description goes here. 30 words.</p>
+         
+        </div>
+        <div class="col-lg-3 col-md-6 bottom-ab-right mt-5">
+          <img src="{% static 'images/ab.jpg' %}" class="img-curve img-fluid" alt="" />
+        </div>
+        <div class="col-lg-3 col-md-6 bottom-ab-right mt-md-5 mt-4">
+          <img src="{% static 'images/ab1.jpg' %}" class="img-curve img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//grids-->
+  <!--/grids2-->
+	
+  <!--//grids2-->
+  <!--/grids-->
+  <section class="w3l-features4 py-5" id="feature">
+    <div class="container py-md-5">
+      <div class="w3l-header text-center mb-md-5 mb-4">
+        <h6 class="sub-title">MERIT MATE</h6>
+        <h3 class="hny-title">How it works ?</h3>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 feature">
+          <div class="feature-body">
+            <div class="feature-images">
+              <span class="fa fa-arrows" aria-hidden="true"></span>
+            </div>
+            <div class="feature-info">
+              <a href="#url">
+                <h3 class="feature-titel">Access all colleges</h3>
+              </a>
+              <p class="feature-text">Small description goes here. 15 words max. Small description goes here. 15 words max. </p>
+          
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-md-0 mt-5 feature">
+          <div class="feature-body">
+            <div class="feature-images">
+              <span class="fa fa-lock" aria-hidden="true"></span>
+            </div>
+            <div class="feature-user">
+              <a href="#url">
+                <h3 class="feature-titel">Login with your account</h3>
+              </a>
+              <p class="feature-text">Small description goes here. 15 words max. Small description goes here. 15 words max. </p>
+               
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-lg-0 mt-5 feature">
+          <div class="feature-body">
+            <div class="feature-images">
+              <span class="fa fa-crosshairs" aria-hidden="true"></span>
+            </div>
+            <div class="feature-info">
+              <a href="#url">
+                <h3 class="feature-titel">Check college info</h3>
+              </a>
+              <p class="feature-text">Small description goes here. 15 words max. Small description goes here. 15 words max. </p>
+                
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-lg-0 mt-5 feature">
+          <div class="feature-body">
+            <div class="feature-images">
+              <span class="fa fa-user" aria-hidden="true"></span>
+            </div>
+            <div class="feature-info">
+              <a href="#url">
+                <h3 class="feature-titel">Check Last Cutoff</h3>
+              </a>
+              <p class="feature-text">Small description goes here. 15 words max. Small description goes here. 15 words max.</p>
+                
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//grids-->
+  <!--/services-->
+  <section class="w3l-services1">
+    <div id="content-with-photo4-block" class="py-5">
+      <div class="container py-md-5">
+        <div class="cwp4-two row">
+          <div class="cwp4-image col-lg-6 pr-lg-5 mb-lg-0 mb-5">
+            <img src="{% static 'images/g3.jpg' %}" class="img-fluid" alt="" />
+          </div>
+          <div class="cwp4-text col-lg-6">
+            <h6 class="sub-title">what We Do</h6>
+            <h3 class="hny-title">What this portal Offer for You</h3>
+            <p>Small description goes here. 30 words max. Small description goes here. 30 words max. Small description goes here. 30 words max. 
+            </p>
+
+            <ul class="cont-4">
+              <li><span class="fa fa-check"></span>Your merit calculator</li>
+              <li><span class="fa fa-check"></span>Find Colleges</li>
+              <li><span class="fa fa-check"></span>Check college information</li>
+              <li><span class="fa fa-check"></span>Check cutoffs</li>
+              <li><span class="fa fa-check"></span>You will get a seat or not!</li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//services-->
+    <!--/w3l-bottom-->
+   
+    <!--//w3l-bottom-->
+ 
+  <!-- //testimonials -->
+
+  <!--/w3l-footer-29-main-->
+
+{% endblock %}

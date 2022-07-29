@@ -1,0 +1,119 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block body %}
+{% block content %}
+    {% if score == "None" %}
+      <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+    {% else %}
+      <p class="btn btn-style btn-info">Merit score : {{score}}</p>
+    {% endif %}
+  {% endblock %}
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container">
+        <h2 class="title">Services</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Services </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+ <!-- call to action 5 -->
+<section class="w3l-cta5">
+  <div class="call-to-action-5 py-5">
+    <div class="container py-lg-5">
+      <div class="call-to-action-5-content text-center">
+        <h3 class="hny-title">Merit based college finder</h3>
+        <p>Small description goes here. 30 words max. Small description goes here. 30 words max. Small description goes here. 30 words max. </p>
+        <div class="three-grids d-grid grid-columns-3">
+          <div class="grid">
+            <div class="icon">
+              <span class="fa fa-graduation-cap" aria-hidden="true"></span>
+            </div>
+            <div class="icon-info">
+              <h4><a href="#">Find Best Colleges</a></h4>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <span class="fa fa-check-square-o" aria-hidden="true"></span>
+            </div>
+            <div class="icon-info">
+              <h4><a href="#">Accurate Information</a></h4>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <span class="fa fa-book" aria-hidden="true"></span>
+            </div>
+            <div class="icon-info">
+              <h4><a href="#">Collge Details</a></h4>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /call to action 5 -->
+<section class="w3l-features14">
+  <div class="w3l-feature-6-main py-5">
+    <div class="container py-lg-5">
+      <div class="wrapper-max">
+        <div class="header-section text-center mb-5">
+          <h6 class="sub-title">Merit based college finder</h6>
+          <h3 class="hny-title two">
+           We are updating our cutoffs every year so you can get compared to the most recent one!.
+          </h3>
+        </div>
+        <div class="grid mt-0">
+          <div class="w3l-feature-6-gd">
+            <div class="icon"><span class="fa fa-building-o"></span></div>
+            <div class="w3l-feature-6-gd-info">
+              <h3><a href="#url">Colleges Listing</a></h3>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+          <div class="w3l-feature-6-gd">
+            <div class="icon"><span class="fa fa-sitemap"></span></div>
+            <div class="w3l-feature-6-gd-info">
+              <h3><a href="#url">Branches Details</a></h3>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="w3l-feature-6-gd">
+            <div class="icon"><span class="fa fa-user"></span></div>
+            <div class="w3l-feature-6-gd-info">
+              <h3><a href="#url">Easy to use</a></h3>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+          <div class="w3l-feature-6-gd">
+            <div class="icon"><span class="fa fa-lock"></span></div>
+            <div class="w3l-feature-6-gd-info">
+              <h3><a href="#url">Secured Info</a></h3>
+              <p>Small description goes here. max 15 words. Small description goes here. max 15 words.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--/-->
+
+<!--//-->
+  <!--/w3l-footer-29-main-->
+ {% endblock %}

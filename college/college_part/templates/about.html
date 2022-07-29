@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+
+{% block body %}{% csrf_token %}
+
+  {% block content %}
+    {% if user.is_authenticated %}
+      {% if score == "None" %}
+        <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+      {% else %}
+        <p class="btn btn-style btn-info">Merit score : {{score}}</p>
+      {% endif %}
+    {% endif %}
+  {% endblock %}
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container py-2">
+        <h2 class="title">About Us</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+  <!-- /about-6-->
+  <section class="w3l-cta4 py-5">
+      <div class="container py-lg-5">
+        <div class="ab-section text-center">
+          <h6 class="sub-title">About Us</h6>
+          <h3 class="hny-title">Highlighting description goes here.</h3>
+          <p class="py-3">Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here.Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here.Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here. Logn description goes here.</p>
+           
+        </div>
+			
+      </div>
+  </section>
+  <!-- //about-6-->
+   <!-- /content-6-->
+  
+  <!--/w3l-footer-29-main-->
+  
+{% endblock %}

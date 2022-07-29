@@ -1,0 +1,106 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+
+{% block body %}{% csrf_token %}
+{% block content %}
+    {% if score == "None" %}
+      <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+    {% endif %}
+  {% endblock %}
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container py-2">
+        <h2 class="title">Computer Engineering</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Merit </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+  <!-- /about-6-->
+  <section class="w3l-cta4 py-5">
+      <div class="container py-lg-5">
+	  
+        <table class="table table-hover ">
+  <thead>
+    <tr class="bg-warning">
+      
+      <th>College Name</th>
+      <th>Intake</th>
+      <th>Last Cutoff</th>
+	  <th>Admission Probability </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="">
+     
+      <td>LD</td>
+      <td>60</td>
+      <td>97.85</td>
+	  <td>No</td>
+    </tr>
+    <tr class="">
+     
+      <td>VGEC</td>
+      <td>120</td>
+      <td>94</td>
+	  <td>No</td>
+    </tr>
+     <tr class="bg-light">
+     
+      <td>SILVER OAK</td>
+      <td>480</td>
+      <td>59</td>
+	  <td>Yes</td>
+    </tr>
+	 <tr class="">
+     
+      <td>LD</td>
+      <td>60</td>
+      <td>97.85</td>
+	  <td>No</td>
+    </tr>
+    <tr class="">
+     
+      <td>VGEC</td>
+      <td>120</td>
+      <td>94</td>
+	  <td>No</td>
+    </tr>
+	<tr class="bg-light">
+     
+      <td>SILVER OAK</td>
+      <td>480</td>
+      <td>59</td>
+	  <td>Yes</td>
+    </tr>
+	<tr class="bg-light">
+     
+      <td>SILVER OAK</td>
+      <td>480</td>
+      <td>59</td>
+	  <td>Yes</td>
+    </tr>
+	 <tr class="">
+     
+      <td>VGEC</td>
+      <td>120</td>
+      <td>94</td>
+	  <td>No</td>
+    </tr>
+  </tbody>
+</table>
+           
+        </div>
+			
+      </div>
+  </section>
+  <!-- //about-6-->
+   <!-- /content-6-->
+  
+  <!--/w3l-footer-29-main-->
+ {% endblock %}

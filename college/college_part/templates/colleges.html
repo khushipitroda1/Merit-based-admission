@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block body %}
+{% block content %}
+    {% if score == "None" %}
+      <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+    {% else %}
+      <p class="btn btn-style btn-info">Merit score : {{score}}</p>
+    {% endif %}
+  {% endblock %} 
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container">
+        <h2 class="title">Colleges</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Colleges </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+ <!-- call to action 5 -->
+
+<!-- /call to action 5 -->
+
+<!--/-->
+<section class="w3l-grids1">
+  <div class="hny-three-grids py-5">
+    <div class="container py-lg-5">
+      <div class="row">
+        
+        {% for i in college %}
+        <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+          <a href="/view/{{i.id}}/"><img src="{{i.logo.url}}" class="img-fluid" alt=""></a>
+          <h4><a href="/view/{{i.id}}/">{{i.name}}</a></h4>
+          <p>Engineering college. It offers many branches. click to view details.</p>
+          {% if user.is_authenticated %}
+		        <a href="/view/{{i.id}}/"> <h5>View Detail</h5></a>
+          {% else %}
+            <a href="/login/"> <h5>View Detail</h5></a>
+          {% endif %}
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!--//-->
+  <!--/w3l-footer-29-main-->
+ {% endblock %}

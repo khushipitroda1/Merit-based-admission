@@ -1,0 +1,125 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block body %}
+{% block content %}
+    {% if score == "None" %}
+      <a href="/merit/" class="btn btn-style btn-info">Generate merit score</a>
+    {% else %}
+      <p class="btn btn-style btn-info">Merit score : {{score}}</p>
+    {% endif %}
+  {% endblock %}
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container py-2">
+        <h2 class="title">About Us</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> View </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+  <!-- /about-6-->
+  <section class="w3l-text-11 py-5">
+    <div class="text11 py-md-5 py-4">
+      <div class="container">
+	  <div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+
+ 
+</div>
+        <div class="row">
+
+          <div class="col-lg-8 text11-content">
+            <img src="{{col.logo.url}}" class="img-fluid" alt="">
+           
+            <p class="mt-4 mb-3">{{col.description}}</p>
+              
+            <h5 class="quote">
+              {{col.qoute}}
+            </h5>
+
+            
+              
+
+            
+            
+            
+         
+
+          </div>
+          <div class="sidebar-side col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-5">
+            <aside class="sidebar">
+              <div class="sidebar-widget sidebar-blog-category">
+
+              <div class="textwidget mx-auto text-center">
+                <a href="#"> <img class="rounded-circle align-center img-fluid" src="{{col.logo.url}}" alt="user_logo"></a>
+                       <div class="sidebar-title">
+                        <h4 class="mb-2 mt-3">{{col.name}}</h4>
+                      </div>
+                <p class="text-center px-lg-4">{{col.address}}</p>
+				<p class="text-center px-lg-4">{{col.phone}}</p>
+                  
+              </div>
+              </div>
+              <!--Blog Category Widget-->
+              
+
+
+              <div class="sidebar-widget sidebar-blog-category">
+                <div class="sidebar-title">
+                  <h4>Seats</h4>
+                </div>
+                <ul class="blog-cat">
+
+                   
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Computer Engineering
+                   <label>{{col.computer_seats}}</label></a></li>
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Information Technology <label>{{col.IT_seats}}</label></a></li>
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Civil Engineering <label>{{col.civil_seats}}</label></a></li>
+					<li><a href="#link"><span class="fa fa-angle-double-right"></span> Mechalnical Engineering <label>{{col.mechanical_seats}}</label></a></li>
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Electrical Engineering <label>{{col.electrical_seats}}</label></a></li>
+                   
+                    </ul>
+              </div>
+			  
+			  <div class="sidebar-widget sidebar-blog-category">
+                <div class="sidebar-title">
+                  <h4>Previous Cuttoff</h4>
+                </div>
+                <ul class="blog-cat">
+
+                   
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Computer Engineering
+                   <label>{{col.computer_cutoff}}</label></a></li>
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Information Technology <label>{{col.IT_cutoff}}</label></a></li>
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Civil Engineering <label>{{col.civil_cutoff}}</label></a></li>
+					<li><a href="#link"><span class="fa fa-angle-double-right"></span> Mechalnical Engineering <label>{{col.mechanical_cutoff}}</label></a></li>
+                    <li><a href="#link"><span class="fa fa-angle-double-right"></span> Electrical Engineering <label>{{col.electrical_cutoff}}</label></a></li>
+                   
+                    </ul>
+              </div>
+
+              <!-- Popular Post Widget-->
+              
+
+
+              <!-- //sidebar sticky -->
+
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //about-6-->
+   <!-- /content-6-->
+  
+  <!--/w3l-footer-29-main-->
+  
+{% endblock %}
